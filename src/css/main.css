@@ -20,6 +20,19 @@ h4 {
   padding: 15px;
 }
 
+.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.text--center {
+  text-align: center;
+}
+
 .header {
   background: #202020;
   border-bottom: 1px solid #29aae1;
@@ -41,6 +54,19 @@ h4 {
   font-size: 14px;
 }
 
+.button--red {
+  display: inline-block;
+  font-weight: 600;
+  padding: 6px;
+  color: #202020;
+  background-color: red;
+  border-radius: 3px;
+  margin: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+}
+
 .nav {
   background: #202020;
 }
@@ -52,6 +78,18 @@ h4 {
   color: white;
   border-radius: 3px;
   margin: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.user-link {
+  display: inline-block;
+  font-weight: 800;
+  font-size: 32px;
+  padding: 4px 0px;
+  color: white;
+  border-radius: 3px;
   cursor: pointer;
   text-decoration: none;
   font-size: 14px;
@@ -104,7 +142,7 @@ h4 {
   padding: 30px;
   background: #303030;
   width: 70%;
-  margin: 0 auto;
+  margin: 10px auto;
   border-radius: 4px;
 }
 
@@ -122,15 +160,26 @@ h4 {
 }
 
 label {
+  display: block;
+  color: grey;
   font-weight: 600;
+  padding: 6px;
 }
 
-.input {
+.form-input {
   padding: 4px;
   margin: 10px;
   font-size: 16px;
   font-weight: 600;
   max-width: 80%;
+}
+
+.input {
+  width: 90%;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 4px;
+  margin: 4px;
 }
 
 .home {
@@ -155,9 +204,11 @@ label {
   border: 1px solid white;
   border-radius: 4px;
   padding: 10px;
+  margin-bottom: 5px;
 }
 
 .post-user {
+  margin-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -167,7 +218,6 @@ label {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px;
 }
 
 .post-user-image {
@@ -175,8 +225,17 @@ label {
   border-radius: 3px;
 }
 
+.post-body {
+  padding: 5px 0px 20px 0px;
+  font-size: 24px;
+}
+
 .post-container {
   max-width: 80%;
+}
+
+.hr {
+  margin: 10px 0px;
 }
 
 .footer {
@@ -185,7 +244,8 @@ label {
 }
 
 .caption {
-  font-size: 12px;
+  font-size: 10px;
+  padding-bottom: 10px;
 }
 
 .inline {
@@ -269,6 +329,11 @@ label {
 
 .notification-markup {
   background: #202020;
+}
+
+.count {
+  font-size: 16px;
+  margin: 10px;
 }
 
 .hero-container {

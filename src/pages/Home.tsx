@@ -22,7 +22,7 @@ class HomePage extends Component<any, any> {
     return (
       <div>
         <div className="hero-container">
-          <img className="hero-image" src={Hero} />
+          <img className="hero-image" src={Hero} alt="Special Forces Soldier" />
         </div>
         <div className="home">
           <h1>Posts</h1>

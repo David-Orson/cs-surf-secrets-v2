@@ -42,17 +42,18 @@ class Post extends Component<any, any> {
             src={`${userImage}`}
             alt={`${userHandle}`}
           />
-          <Link className="nav-link" to={`/users/${userHandle}`}>
-            {userHandle}
-          </Link>
+          {deleteButton}
         </div>
 
-        {deleteButton}
+        <Link className="user-link" to={`/users/${userHandle}`}>
+          {userHandle}
+        </Link>
+
         <p className="caption">{dayjs(createdAt).fromNow()}</p>
-        <p className="font1">{body}</p>
+        <p className="post-body">{body}</p>
         <LikeButton postId={postId} />
-        <span className="caption">{likeCount} Likes </span>
-        <span className="caption">{commentCount} Comments </span>
+        <span className="count">{likeCount} Likes </span>
+        <span className="count">{commentCount}</span>
         <PostDialog
           postId={postId}
           userHandle={userHandle}

@@ -68,29 +68,6 @@ class PostDialog extends Component<any, any> {
       <p>Loading...</p>
     ) : (
       <div>
-        <div className="post-user">
-          <img
-            className="post-user-image"
-            height="50px"
-            width="50px"
-            src={`${userImage}`}
-            alt={`${userHandle} Profile`}
-          />
-          <Link className="nav-link" to={`/users/${userHandle}`}>
-            {userHandle}
-          </Link>
-        </div>
-
-        <p className="caption">
-          {dayjs(createdAt).format("h:mm a, MMMM DD YYYY")}
-        </p>
-
-        <p className="font1">{body}</p>
-        <LikeButton postId={postId} />
-        <span className="caption">{likeCount} likes</span>
-        <br />
-        <span className="caption">{commentCount} Comments</span>
-
         <CommentForm postId={postId} />
         <Comments comments={comments} />
       </div>
@@ -99,12 +76,12 @@ class PostDialog extends Component<any, any> {
     return (
       <Fragment>
         <button className="button" onClick={this.handleOpen}>
-          EXPAND POST
+          Comments
         </button>
         {this.state.open ? (
           <div className="post" style={this.state.open ? trueOpen : falseOpen}>
-            <button className="button" onClick={this.handleClose}>
-              Cancel
+            <button className="button--red" onClick={this.handleClose}>
+              Close
             </button>
             {dialogMarkup}
           </div>

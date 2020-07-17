@@ -51,7 +51,7 @@ class SignupPage extends Component<any, any> {
           <div className="entry">
             <label>Email Address</label>
             <input
-              className="input"
+              className="form-input"
               id="email"
               name="email"
               type="email"
@@ -63,7 +63,7 @@ class SignupPage extends Component<any, any> {
           <div className="entry">
             <label>Password</label>
             <input
-              className="input"
+              className="form-input"
               id="password"
               name="password"
               type="password"
@@ -75,7 +75,7 @@ class SignupPage extends Component<any, any> {
           <div className="entry">
             <label>Confirm Password</label>
             <input
-              className="input"
+              className="form-input"
               id="confirmPassword"
               name="confirmPassword"
               type="password"
@@ -87,7 +87,7 @@ class SignupPage extends Component<any, any> {
           <div className="entry">
             <label>Username</label>
             <input
-              className="input"
+              className="form-input"
               id="handle"
               name="handle"
               type="text"

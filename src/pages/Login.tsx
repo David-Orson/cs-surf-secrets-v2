@@ -44,7 +44,7 @@ class LoginPage extends Component<any, any> {
           <div className="entry">
             <label className="label">Email Address</label>
             <input
-              className="input"
+              className="form-input"
               id="email"
               name="email"
               type="email"
@@ -56,7 +56,7 @@ class LoginPage extends Component<any, any> {
           <div className="entry">
             <label>Password</label>
             <input
-              className="input"
+              className="form-input"
               id="password"
               name="password"
               type="password"

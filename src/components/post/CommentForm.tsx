@@ -38,7 +38,7 @@ class CommentForm extends Component<any, any> {
     const commentFormMarkup = authenticated ? (
       <div>
         <form noValidate className="signup-form" onSubmit={this.handleSubmit}>
-          <div>
+          <div className="text--center">
             <label>Comment on Post</label>
             <input
               className="input"
@@ -50,11 +50,13 @@ class CommentForm extends Component<any, any> {
             />
             {errors.comment && <p>{errors.comment}</p>}
           </div>
-          <button className="button" type="submit">
-            CREATE POST
-          </button>
+          <div className="center">
+            <button className="button" type="submit">
+              COMMENT
+            </button>
+          </div>
         </form>
-        <hr />
+        <hr className="hr" />
       </div>
     ) : null;
     return commentFormMarkup;

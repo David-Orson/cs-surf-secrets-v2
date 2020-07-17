@@ -62,10 +62,10 @@ class CreatePost extends Component<any, any> {
           CREATE POST
         </button>
         <div style={this.state.open ? trueOpen : falseOpen}>
-          <button className="button" onClick={this.handleClose}>
-            Cancel
+          <button className="button--red" onClick={this.handleClose}>
+            CANCEL
           </button>
-          <form noValidate className="post-form" onSubmit={this.handleSubmit}>
+          <form noValidate className="signup-form" onSubmit={this.handleSubmit}>
             <div>
               <h4>Create a new post</h4>
               <label>Post Content</label>
@@ -80,7 +80,7 @@ class CreatePost extends Component<any, any> {
               {errors.body && <p>{errors.body}</p>}
             </div>
             <button className="button" type="submit">
-              SUBMIT
+              POST
             </button>
             {loading && <p>Loading...</p>}
           </form>

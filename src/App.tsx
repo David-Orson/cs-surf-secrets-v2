@@ -23,7 +23,7 @@ const Profile = (props: RouteComponentProps) => <ProfilePage />;
 const Signup = (props: RouteComponentProps) => <SignupPage />;
 const Login = (props: RouteComponentProps) => <LoginPage />;
 const User = (props: RouteComponentProps) => <UserPage />;
-// conditional Routing TODO
+
 const token = localStorage.FBIdToken;
 if (token) {
   const decodedToken: any = jwtDecode(token);

@@ -15,21 +15,22 @@ export class Comments extends Component<any, any> {
               <div className="post-user">
                 <img
                   className="post-user-image"
-                  height="30px"
-                  width="30px"
+                  height="40px"
+                  width="40px"
                   src={`${userImage}`}
                   alt={`${userHandle} Profile`}
                 />
-                <Link className="nav-link" to={`/users/${userHandle}`}>
-                  {userHandle}
-                </Link>
               </div>
+              <Link className="user-link" to={`/users/${userHandle}`}>
+                {userHandle}
+              </Link>
               <div>
                 <p className="caption">
                   {dayjs(createdAt).format("h:mm a, MMMM DD YYYY")}
                 </p>
 
-                <p className="font1">{body}</p>
+                <p className="post-body">{body}</p>
+                <hr />
               </div>
             </Fragment>
           );
