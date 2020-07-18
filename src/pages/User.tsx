@@ -54,13 +54,15 @@ class User extends Component<any, any> {
 
     return (
       <div className="user">
-        <h1>Posts</h1>
-        <h2>{postsMarkup}</h2>
         {this.state.profile === null ? (
           <p>Loading Profile...</p>
         ) : (
           <StaticProfile profile={this.state.profile} />
         )}
+        <h1>Posts</h1>
+        <div className="profile-container">
+          <h2>{postsMarkup}</h2>
+        </div>
       </div>
     );
   }

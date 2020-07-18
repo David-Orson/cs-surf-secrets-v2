@@ -16,8 +16,18 @@ body {
 /* box model */
 /* colors */
 /* fonts/decorations */
+h1 {
+  margin: 16px;
+  text-align: center;
+}
+
 h4 {
   padding: 15px;
+}
+
+.text1 {
+  color: white;
+  margin: 10px 20px;
 }
 
 .center {
@@ -86,13 +96,24 @@ h4 {
 .user-link {
   display: inline-block;
   font-weight: 800;
-  font-size: 32px;
+  font-size: 20px;
   padding: 4px 0px;
   color: white;
   border-radius: 3px;
   cursor: pointer;
   text-decoration: none;
-  font-size: 14px;
+}
+
+.profile-link {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 48px;
+  padding: 6px;
+  color: white;
+  border-radius: 3px;
+  margin: 4px;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .nav-button {
@@ -232,6 +253,7 @@ label {
 
 .post-container {
   max-width: 80%;
+  min-width: 300px;
 }
 
 .hr {
@@ -253,7 +275,20 @@ label {
 }
 
 .profile {
+  padding: 10px;
+  width: 90%;
   color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+}
+
+.profile-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .profile-image-container {
@@ -334,6 +369,10 @@ label {
 .count {
   font-size: 16px;
   margin: 10px;
+}
+
+.image-input {
+  display: block;
 }
 
 .hero-container {

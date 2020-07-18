@@ -29,47 +29,47 @@ class Profile extends Component<any, any> {
 
     let profileMarkup = !loading ? (
       authenticated ? (
-        <div className="profile">
-          <div className="profile-image-container">
-            <img
-              className="user-image"
-              height="100px"
-              width="100px"
-              src={`${imageUrl}`}
-              alt="profile"
-            />
-            <Link className="nav-link" to={`users/${handle}`}>
-              {handle}
-            </Link>
+        <div className="profile-container">
+          <div className="profile">
+            <div className="profile-image-container">
+              <img
+                className="user-image"
+                height="100px"
+                width="100px"
+                src={`${imageUrl}`}
+                alt="profile"
+              />
+              <p className="profile-link">{handle}</p>
+            </div>
             {location && <p className="caption">{location}</p>}
-          </div>
-          <div className="user-details">
+            <p className="caption">
+              Member Since {dayjs(createdAt).format("DD MMM YYYY")}
+            </p>
             <input
               type="file"
               id="imageInput"
               onChange={this.handleImageChange}
+              className="image-input"
             />
 
-            <p className="caption">
-              Member Since {dayjs(createdAt).format("DD MMM YYYY")}
-            </p>
-          </div>
+            <div className="user-details"></div>
 
-          <div className="profile-details">
-            <div className="bio-details">
-              <h3>Bio</h3>
-              {bio && <p>{bio}</p>}
+            <div className="profile-details">
+              <div className="bio-details">
+                <h3>Bio</h3>
+                {bio && <p>{bio}</p>}
+              </div>
+
+              {steam && <button className="button">STEAM</button>}
             </div>
-
-            {steam && <button className="button">STEAM</button>}
+            <button className="button--red" onClick={this.handleLogout}>
+              LOGOUT
+            </button>
+            <EditDetails />
           </div>
-          <button className="button" onClick={this.handleLogout}>
-            LOGOUT
-          </button>
-          <EditDetails />
         </div>
       ) : (
-        <p>No profile found, please login</p>
+        <p className="text1">No profile found, please login</p>
       )
     ) : (
       <p>loading...</p>
