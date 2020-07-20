@@ -1,50 +1,9 @@
 const functions = require("firebase-functions");
 const app = require("express")();
 const FBAuth = require("./utility/fbAuth");
-const passport = require("passport");
-const SteamStrategy = require("passport-steam");
 
-passport.serializeUser(function (user, done) {
-  done(null, user);
-});
-
-passport.deserializeUser(function (obj, done) {
-  done(null, obj);
-});
-
-passport.use(
-  new SteamStrategy(
-    {
-      returnURL: "http://localhost:3000/auth/steam/return",
-      realm: "http://localhost:3000/",
-      apiKey: "",
-    },
-    function (identifier, profile, done) {
-      profile.identifier = identifier;
-      return done(null, profile);
-    }
-  )
-);
-
-app.use(passport.initialize());
-
-app.get(
-  "/steam",
-  passport.authenticate("steam", { failureRedirect: "login" }),
-  function (req, res, next) {}
-);
-
-app.get(
-  "/steam/return",
-  function (req, res) {
-    req.url = req.originalUrl;
-    next();
-  },
-  passport.authenticate("steam", { failureRedirect: "/login" }),
-  function (req, res) {
-    res.json("hi");
-  }
-);
+const cors = require("cors");
+app.use(cors());
 
 const { db } = require("./utility/admin");
 

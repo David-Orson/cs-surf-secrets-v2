@@ -24,6 +24,9 @@ const Signup = (props: RouteComponentProps) => <SignupPage />;
 const Login = (props: RouteComponentProps) => <LoginPage />;
 const User = (props: RouteComponentProps) => <UserPage />;
 
+axios.defaults.baseURL =
+  "https://europe-west1-cs-surf-secrets.cloudfunctions.net/api";
+
 const token = localStorage.FBIdToken;
 if (token) {
   const decodedToken: any = jwtDecode(token);

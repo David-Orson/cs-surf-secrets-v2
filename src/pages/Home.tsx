@@ -5,7 +5,8 @@ import CreatePost from "../components/post/CreatePost";
 import { connect } from "react-redux";
 import { getPosts } from "../redux/actions/dataActions";
 
-import Hero from "../Assets/images/csgo-hero1.jpg";
+import Hero from "../Assets/images/nyxhero.png";
+
 class HomePage extends Component<any, any> {
   componentDidMount() {
     this.props.getPosts();

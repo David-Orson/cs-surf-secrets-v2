@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from "react";
-import { Link } from "@reach/router";
 
 class Footer extends Component {
   render() {
@@ -7,12 +6,20 @@ class Footer extends Component {
       <div className="footer">
         <Fragment>
           <ul>
-            <Link to="/" className="nav-link">
+            <a
+              href="https://discord.gg/Vdj6Bm5"
+              target="_blank"
+              className="nav-link"
+            >
               SUPPORT
-            </Link>
-            <Link to="profile" className="nav-link">
+            </a>
+            <a
+              href="https://www.paypal.me/OrsonDC"
+              target="_blank"
+              className="nav-link"
+            >
               DONATE
-            </Link>
+            </a>
           </ul>
         </Fragment>
       </div>

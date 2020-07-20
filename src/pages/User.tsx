@@ -18,8 +18,6 @@ class User extends Component<any, any> {
     const urlArr = handleAndPost.split("/");
     const handle = urlArr[0];
     const postId = urlArr[2];
-    console.log(handle);
-    console.log(postId);
 
     if (postId) this.setState({ postIdParam: postId });
 
