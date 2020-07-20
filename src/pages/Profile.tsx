@@ -6,6 +6,8 @@ import { connect } from "react-redux";
 import { logoutUser, uploadImage } from "../redux/actions/userActions";
 
 import EditDetails from "../components/profile/EditDetails";
+import AddTodoList from "../components/profile/AddTodoList";
+import ProfileTodoList from "../components/profile/ProfileTodoList";
 class Profile extends Component<any, any> {
   handleImageChange = (event: any) => {
     const image = event.target.files[0];
@@ -26,6 +28,23 @@ class Profile extends Component<any, any> {
         authenticated,
       },
     } = this.props;
+
+    const todoData = [
+      {
+        record: "WR",
+        map: "surf_nyx",
+        zone: "Map",
+        server: "KSF",
+        todoId: 1,
+      },
+      {
+        record: "Top10",
+        map: "surf_mesa_fix",
+        zone: "Map",
+        server: "SH",
+        todoId: 2,
+      },
+    ];
 
     let profileMarkup = !loading ? (
       authenticated ? (
@@ -61,6 +80,10 @@ class Profile extends Component<any, any> {
               </div>
 
               {steam && <button className="button">STEAM</button>}
+              <div>
+                <AddTodoList />
+                <ProfileTodoList data={todoData} />
+              </div>
             </div>
             <button className="button--red" onClick={this.handleLogout}>
               LOGOUT
