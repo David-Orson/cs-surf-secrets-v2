@@ -25,7 +25,7 @@ const {
   getUserDetails,
   markNotificationsRead,
 } = require("./handlers/users");
-const { postSingleTodo } = require("./handlers/todos");
+const { postSingleTodo, getUserTodos } = require("./handlers/todos");
 
 // Post Routes
 app.get("/posts", getAllPosts);
@@ -37,6 +37,7 @@ app.get("/post/:postId/unlike", FBAuth, unlikePost);
 app.post("/post/:postId/comment", FBAuth, commentOnPost);
 
 // Todo Routes
+app.get("/todos/:handle", getUserTodos);
 app.post("/todo", FBAuth, postSingleTodo);
 
 // Users Routes
