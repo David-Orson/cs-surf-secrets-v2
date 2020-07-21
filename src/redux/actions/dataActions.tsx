@@ -11,6 +11,7 @@ import {
   STOP_LOADING_UI,
   SET_POST,
   SUBMIT_COMMENT,
+  ADD_TODO,
 } from "../types";
 import axios from "axios";
 
@@ -136,4 +137,23 @@ export const getUserData = (userHandle: any) => (dispatch: any) => {
 
 export const clearErrors = () => (dispatch: any) => {
   dispatch({ type: CLEAR_ERRORS });
+};
+
+export const addTodo = (newTodo: any) => (dispatch: any) => {
+  dispatch({ type: LOADING_UI });
+  axios
+    .post("/todo", newTodo)
+    .then((res) => {
+      dispatch({
+        type: ADD_TODO,
+        payload: res.data,
+      });
+      dispatch(clearErrors());
+    })
+    .catch((err) => {
+      dispatch({
+        type: SET_ERRORS,
+        payload: err.response.data,
+      });
+    });
 };

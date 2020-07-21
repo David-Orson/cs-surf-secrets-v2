@@ -7,6 +7,7 @@ import {
   CREATE_POST,
   SET_POST,
   SUBMIT_COMMENT,
+  ADD_TODO,
 } from "../types";
 
 interface initialState {
@@ -71,6 +72,10 @@ export default function (state = initialState, action: any) {
           ...state.post,
           comments: [action.payload, ...state.post.comments],
         },
+      };
+    case ADD_TODO:
+      return {
+        ...state,
       };
     default:
       return state;
