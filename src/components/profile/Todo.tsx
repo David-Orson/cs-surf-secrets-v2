@@ -6,7 +6,7 @@ export class Todo extends Component<any, any> {
       <div>
         <ul>
           <li>{this.props.todo.record}</li>
-          <li>{this.props.todo.map}</li>
+          <li>{this.props.todo.course}</li>
           <li>{this.props.todo.zone}</li>
           <li>{this.props.todo.server}</li>
         </ul>

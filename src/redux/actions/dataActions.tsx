@@ -12,6 +12,7 @@ import {
   SET_POST,
   SUBMIT_COMMENT,
   ADD_TODO,
+  SET_TODOS,
 } from "../types";
 import axios from "axios";
 
@@ -155,5 +156,17 @@ export const addTodo = (newTodo: any) => (dispatch: any) => {
         type: SET_ERRORS,
         payload: err.response.data,
       });
+    });
+};
+
+export const getTodos = (userHandle: any) => (dispatch: any) => {
+  dispatch({ type: LOADING_DATA });
+  axios
+    .get(`/todos/${userHandle}`)
+    .then((res) => {
+      dispatch({ type: SET_TODOS, payload: res.data.todos });
+    })
+    .catch((err: any) => {
+      console.log(err);
     });
 };

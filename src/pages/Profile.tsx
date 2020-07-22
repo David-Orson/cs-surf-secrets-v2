@@ -82,7 +82,7 @@ class Profile extends Component<any, any> {
               {steam && <button className="button">STEAM</button>}
               <div>
                 <AddTodoList />
-                <ProfileTodoList data={todoData} />
+                <ProfileTodoList handle={handle} />
               </div>
             </div>
             <button className="button--red" onClick={this.handleLogout}>

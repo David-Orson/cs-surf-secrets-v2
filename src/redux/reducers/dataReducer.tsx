@@ -8,18 +8,21 @@ import {
   SET_POST,
   SUBMIT_COMMENT,
   ADD_TODO,
+  SET_TODOS,
 } from "../types";
 
 interface initialState {
   posts: any;
   post: any;
   loading: any;
+  todos: any;
 }
 
 const initialState: initialState = {
   posts: [],
   post: {},
   loading: false,
+  todos: [],
 };
 
 export default function (state = initialState, action: any) {
@@ -76,6 +79,12 @@ export default function (state = initialState, action: any) {
     case ADD_TODO:
       return {
         ...state,
+      };
+    case SET_TODOS:
+      return {
+        ...state,
+        todos: action.payload,
+        loading: false,
       };
     default:
       return state;

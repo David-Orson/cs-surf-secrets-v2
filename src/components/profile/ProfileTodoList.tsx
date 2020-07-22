@@ -1,28 +1,58 @@
 import React, { Component } from "react";
 import Todo from "../profile/Todo";
 
+import { getTodos } from "../../redux/actions/dataActions";
+import { connect } from "react-redux";
+
+interface State {
+  open: any;
+}
 export class ProfileTodoList extends Component<any, any> {
-  componentDidMount() {
-    console.log(this.props);
-  }
+  state: State = {
+    open: false,
+  };
+
+  handleOpener = () => {
+    this.state.open
+      ? this.setState({ open: false })
+      : this.setState({ open: true });
+    this.props.getTodos(this.props.handle);
+  };
 
   render() {
-    let todos = this.props.data;
-    let todomarkup = todos.map((todo: any) => (
-      <Todo key={todo.todoId} todo={todo} />
-    ));
+    const falseOpen = {
+      display: "none",
+    };
+
+    const trueOpen = {
+      display: "block",
+    };
+
+    let todos = this.props.data.todos;
+    let todoMarkup = todos ? (
+      todos.map((todo: any) => <Todo key={todo.todoId} todo={todo} />)
+    ) : (
+      <p>Loading</p>
+    );
     return (
       <div id="todo-list">
-        <ul>
-          <li>Record</li>
-          <li>Map</li>
-          <li>Zone</li>
-          <li>Server</li>
-        </ul>
-        {todomarkup}
+        <button className="button" onClick={this.handleOpener}>
+          VIEW
+        </button>
+        <div style={this.state.open ? trueOpen : falseOpen}>
+          <ul>
+            <li>Record</li>
+            <li>Map</li>
+            <li>Zone</li>
+            <li>Server</li>
+            {todoMarkup}
+          </ul>
+        </div>
       </div>
     );
   }
 }
 
-export default ProfileTodoList;
+const mapStateToProps = (state: any) => ({ data: state.data });
+
+export default connect(mapStateToProps, { getTodos })(ProfileTodoList);

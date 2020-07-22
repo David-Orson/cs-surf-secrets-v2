@@ -19,3 +19,4 @@ export const CREATE_POST = "CREATE_POST";
 export const SUBMIT_COMMENT = "SUBMIT_COMMENT";
 
 export const ADD_TODO = "ADD_TODO";
+export const SET_TODOS = "SET_TODOS";
