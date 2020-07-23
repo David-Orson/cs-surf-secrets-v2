@@ -20,6 +20,10 @@ h4 {
   padding: 15px;
 }
 
+li {
+  list-style-type: none;
+}
+
 .text1 {
   color: white;
   margin: 10px 20px;
@@ -301,4 +305,88 @@ label {
 
 .image-input {
   display: block;
+}
+
+// Todos
+
+.todo-container {
+  border: 1px white solid;
+  padding: 20px;
+  border-radius: 3px;
+}
+
+.todo-select {
+  display: block;
+  font-size: 16px;
+  font-weight: 700px;
+  padding: 1px;
+  margin: 6px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #aaa;
+  box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.4);
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+.todo-input {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 1px;
+  margin: 6px;
+  width: 99%;
+}
+
+.todo-list-container {
+  border: 1px white solid;
+  padding: 20px 2px 20px 2px;
+  border-radius: 3px;
+}
+
+.todo-items-container {
+  border: 1px solid white;
+  padding: 5px;
+  border-radius: 3px;
+  margin: 10px 0px 0px 0px;
+}
+
+.todo-li {
+  display: inline-block;
+  border: 1px white solid;
+  min-width: 150px;
+  text-align: center;
+  padding: 3px 0px;
+}
+
+.todo-li-1 {
+  display: inline-block;
+  border: 1px white solid;
+  min-width: 100px;
+  text-align: center;
+  padding: 3px 0px;
+}
+
+.todo-li-3 {
+  display: inline-block;
+  border: 1px white solid;
+  min-width: 70px;
+  text-align: center;
+  padding: 3px 0px;
+}
+
+.todo-li-3 {
+  display: inline-block;
+  border: 1px white solid;
+  min-width: 70px;
+  text-align: center;
+  padding: 3px 0px;
+}
+
+.todo-li-4 {
+  display: inline-block;
+  border: 1px white solid;
+  min-width: 70px;
+  text-align: center;
+  padding: 3px 0px;
 }

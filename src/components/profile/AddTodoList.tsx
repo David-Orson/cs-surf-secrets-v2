@@ -43,6 +43,7 @@ export class AddTodoList extends Component<any, any> {
         <h2>To Do List</h2>
         <form onSubmit={this.handleSubmit}>
           <select
+            className="todo-select"
             value={this.state.record}
             name="record"
             onChange={this.handleChange}
@@ -60,18 +61,19 @@ export class AddTodoList extends Component<any, any> {
             <option value="completion">Completion</option>
           </select>
           <input
-            className="input"
             type="text"
             name="course"
             id="course"
             value={this.state.course}
             onChange={this.handleChange}
             placeholder="Map"
+            className="todo-input"
           />
           <select
             value={this.state.zone}
             name="zone"
             onChange={this.handleChange}
+            className="todo-select"
           >
             <option value="map">Map</option>
             <option value="stage">Stage</option>
@@ -81,6 +83,7 @@ export class AddTodoList extends Component<any, any> {
             value={this.state.server}
             name="server"
             onChange={this.handleChange}
+            className="todo-select"
           >
             <option value="css-ksf">CSS KSF</option>
             <option value="heaven">Heaven</option>

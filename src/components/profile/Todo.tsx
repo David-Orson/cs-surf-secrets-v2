@@ -5,10 +5,10 @@ export class Todo extends Component<any, any> {
     return (
       <div>
         <ul>
-          <li>{this.props.todo.record}</li>
-          <li>{this.props.todo.course}</li>
-          <li>{this.props.todo.zone}</li>
-          <li>{this.props.todo.server}</li>
+          <li className="todo-li-1">{this.props.todo.record}</li>
+          <li className="todo-li">{this.props.todo.course}</li>
+          <li className="todo-li-3">{this.props.todo.zone}</li>
+          <li className="todo-li-4">{this.props.todo.server}</li>
         </ul>
       </div>
     );

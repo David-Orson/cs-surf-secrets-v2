@@ -35,16 +35,19 @@ export class ProfileTodoList extends Component<any, any> {
       <p>Loading</p>
     );
     return (
-      <div id="todo-list">
+      <div id="todo-list" className="todo-list-container">
         <button className="button" onClick={this.handleOpener}>
           VIEW
         </button>
-        <div style={this.state.open ? trueOpen : falseOpen}>
+        <div
+          style={this.state.open ? trueOpen : falseOpen}
+          className="todo-items-container"
+        >
           <ul>
-            <li>Record</li>
-            <li>Map</li>
-            <li>Zone</li>
-            <li>Server</li>
+            <li className="todo-li-1">Record</li>
+            <li className="todo-li">Map</li>
+            <li className="todo-li-3">Zone</li>
+            <li className="todo-li-4">Server</li>
             {todoMarkup}
           </ul>
         </div>
