@@ -135,6 +135,7 @@ li {
   margin: 4px;
   cursor: pointer;
   text-decoration: none;
+  font-family: "Russo One", sans-serif;
 }
 
 .nav-button {
@@ -182,10 +183,12 @@ li {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 30px;
-  background: #303030;
-  width: 70%;
+  background: #161616;
+  width: 80%;
+  max-width: 700px;
   margin: 10px auto;
   border-radius: 4px;
+  border: 3px solid #2b2b2b;
 }
 
 .create-post-container {
@@ -231,9 +234,15 @@ label {
 .form-input {
   padding: 4px;
   margin: 10px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   max-width: 80%;
+  min-width: 300px;
+  border-radius: 4px;
+}
+
+.form-input:focus {
+  border: #29aae1 2px solid;
 }
 
 .input {
@@ -318,6 +327,7 @@ label {
 }
 
 .caption {
+  font-family: "Russo One", sans-serif;
   font-size: 10px;
   padding-bottom: 10px;
 }
@@ -329,8 +339,9 @@ label {
 .profile {
   padding: 10px;
   width: 90%;
+  max-width: 800px;
   color: white;
-  border: 1px solid white;
+  border: 3px solid #2b2b2b;
   border-radius: 4px;
 }
 
@@ -376,12 +387,6 @@ label {
 }
 
 .user-details {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin: 10px;
 }
 
@@ -399,7 +404,7 @@ label {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px solid white;
+  border: 3px solid #2b2b2b;
   width: 200px;
   padding: 10px;
   margin: 10px;
@@ -427,10 +432,11 @@ label {
 
 .image-input {
   display: block;
+  font-family: "Russo One", sans-serif;
 }
 
 .todo-container {
-  border: 1px white solid;
+  border: 3px solid #2b2b2b;
   padding: 20px;
   border-radius: 3px;
 }
@@ -461,13 +467,13 @@ label {
 }
 
 .todo-list-container {
-  border: 1px white solid;
+  border: 3px solid #2b2b2b;
   padding: 20px 2px 20px 2px;
   border-radius: 3px;
 }
 
 .todo-items-container {
-  border: 1px solid white;
+  border: 3px solid #2b2b2b;
   padding: 5px;
   border-radius: 3px;
   margin: 10px 0px 0px 0px;
@@ -475,7 +481,7 @@ label {
 
 .todo-li {
   display: inline-block;
-  border: 1px white solid;
+  border: 3px solid #2b2b2b;
   min-width: 150px;
   text-align: center;
   padding: 3px 0px;
@@ -483,7 +489,7 @@ label {
 
 .todo-li-1 {
   display: inline-block;
-  border: 1px white solid;
+  border: 3px solid #2b2b2b;
   min-width: 100px;
   text-align: center;
   padding: 3px 0px;
@@ -491,7 +497,7 @@ label {
 
 .todo-li-3 {
   display: inline-block;
-  border: 1px white solid;
+  border: 3px solid #2b2b2b;
   min-width: 70px;
   text-align: center;
   padding: 3px 0px;
@@ -499,7 +505,7 @@ label {
 
 .todo-li-3 {
   display: inline-block;
-  border: 1px white solid;
+  border: 3px solid #2b2b2b;
   min-width: 70px;
   text-align: center;
   padding: 3px 0px;
@@ -507,7 +513,7 @@ label {
 
 .todo-li-4 {
   display: inline-block;
-  border: 1px white solid;
+  border: 3px solid #2b2b2b;
   min-width: 70px;
   text-align: center;
   padding: 3px 0px;

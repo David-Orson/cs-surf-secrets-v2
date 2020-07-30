@@ -71,14 +71,14 @@ class Profile extends Component<any, any> {
               className="image-input"
             />
 
-            <div className="user-details"></div>
-
-            <div className="profile-details">
+            <div className="user-details">
               <div className="bio-details">
                 <h3>Bio</h3>
                 {bio && <p>{bio}</p>}
               </div>
+            </div>
 
+            <div className="profile-details">
               {steam && <button className="button">STEAM</button>}
               <div>
                 <AddTodoList />
