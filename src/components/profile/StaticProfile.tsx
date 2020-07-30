@@ -18,25 +18,22 @@ const StaticProfile = (props: any) => {
             src={`${imageUrl}`}
             alt="profile"
           />
-          <Link className="nav-link" to={`users/${handle}`}>
-            {handle}
-          </Link>
-          {location && <p className="caption">{location}</p>}
-          <div className="user-details">
-            <p className="caption">
-              Member Since {dayjs(createdAt).format("DD MMM YYYY")}
-            </p>
-          </div>
+          <p className="profile-link">{handle}</p>
         </div>
-
-        <div className="profile-details">
+        {location && <p className="caption">{location}</p>}
+        <p className="caption">
+          Member Since {dayjs(createdAt).format("DD MMM YYYY")}
+        </p>
+        <div className="user-details">
           <div className="bio-details">
             <h3>Bio</h3>
             {bio && <p>{bio}</p>}
           </div>
-
           {steam && <button className="button">STEAM</button>}
         </div>
+      </div>
+      <div className="profile-details">
+        <div></div>
       </div>
     </div>
   );

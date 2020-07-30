@@ -444,7 +444,7 @@ label {
 .todo-select {
   display: block;
   font-size: 16px;
-  font-weight: 700px;
+  font-weight: 700;
   padding: 1px;
   margin: 6px;
   width: 100%;
@@ -454,16 +454,38 @@ label {
   -webkit-box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.4);
           box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.4);
   border-radius: 2px;
-  background-color: #fff;
+  background-color: #2b2b2b;
+  border-radius: 4px;
+  color: white;
 }
 
 .todo-input {
   display: block;
   font-size: 16px;
   font-weight: 700;
-  padding: 1px;
+  padding: 4px;
   margin: 6px;
-  width: 99%;
+  width: 97.5%;
+  border-radius: 4px;
+  border: 1px solid #aaa;
+  background-color: #2b2b2b;
+  color: white;
+}
+
+.todo-input::-webkit-input-placeholder {
+  color: #d6d6d6;
+}
+
+.todo-input:-ms-input-placeholder {
+  color: #d6d6d6;
+}
+
+.todo-input::-ms-input-placeholder {
+  color: #d6d6d6;
+}
+
+.todo-input::placeholder {
+  color: #d6d6d6;
 }
 
 .todo-list-container {
