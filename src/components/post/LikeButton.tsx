@@ -26,11 +26,11 @@ export class LikeButton extends Component<any, any> {
       <div></div>
     ) : this.likedPost() ? (
       <button className="button" onClick={this.unlikePost}>
-        UNLIKE
+        -
       </button>
     ) : (
       <button className="button" onClick={this.likePost}>
-        LIKE
+        +
       </button>
     );
 

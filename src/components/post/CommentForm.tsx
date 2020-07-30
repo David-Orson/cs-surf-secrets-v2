@@ -37,14 +37,17 @@ class CommentForm extends Component<any, any> {
     const errors = this.state.errors;
     const commentFormMarkup = authenticated ? (
       <div>
-        <form noValidate className="signup-form" onSubmit={this.handleSubmit}>
+        <form
+          noValidate
+          className="create-post-form"
+          onSubmit={this.handleSubmit}
+        >
           <div className="text--center">
             <label>Comment on Post</label>
-            <input
-              className="input"
+            <textarea
+              className="input input-post"
               id="body"
               name="body"
-              type="text"
               value={this.state.body}
               onChange={this.handleChange}
             />

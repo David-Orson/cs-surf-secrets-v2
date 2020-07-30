@@ -76,12 +76,12 @@ class PostDialog extends Component<any, any> {
     return (
       <Fragment>
         <button className="button" onClick={this.handleOpen}>
-          Comments
+          OPEN
         </button>
         {this.state.open ? (
           <div className="post" style={this.state.open ? trueOpen : falseOpen}>
             <button className="button--red" onClick={this.handleClose}>
-              Close
+              X
             </button>
             {dialogMarkup}
           </div>

@@ -11,13 +11,21 @@
 
 /* fonts/decorations */
 
+/*
+
+            font-family: 'Roboto', sans-serif;
+
+    font-family: 'Russo One', sans-serif; */
+
 h1 {
   margin: 16px;
   text-align: center;
+  font-family: "Russo One", sans-serif;
 }
 
 h4 {
   padding: 15px;
+  font-family: "Russo One", sans-serif;
 }
 
 li {
@@ -40,36 +48,44 @@ li {
 
 .header {
   background: #202020;
-  border-bottom: 1px solid #29aae1;
+  border-bottom: 2px solid #29aae1;
 }
 
 .logo {
   width: 100px;
+  margin: 0px 10px 0px 20px;
 }
 
 .button {
+  font-family: "Russo One", sans-serif;
   display: inline-block;
-  font-weight: 600;
-  padding: 6px;
+  font-weight: 500;
+  padding: 8px;
   color: #202020;
-  border-radius: 3px;
-  margin: 4px;
+  border-radius: 5px;
+  margin: 4px 4px 6px 4px;
   cursor: pointer;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 16px;
+  border: 1px solid rgb(43, 43, 43);
+  background-color: #131313;
+  color: white;
 }
 
 .button--red {
+  font-family: "Russo One", sans-serif;
   display: inline-block;
   font-weight: 600;
-  padding: 6px;
-  color: #202020;
-  background-color: red;
+  padding: 4px 8px;
+  color: #161616;
+  background-color: rgb(141, 0, 0);
   border-radius: 3px;
   margin: 4px;
   cursor: pointer;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 16px;
+  border: none;
+  border: 1px solid rgb(182, 182, 182);
 }
 
 .nav {
@@ -77,18 +93,20 @@ li {
 }
 
 .nav-link {
+  font-family: "Russo One", sans-serif;
   display: inline-block;
   font-weight: 600;
   padding: 6px;
   color: white;
   border-radius: 3px;
-  margin: 4px;
+  margin: 10px 4px 10px 4px;
   cursor: pointer;
   text-decoration: none;
   font-size: 14px;
 }
 
 .user-link {
+  font-family: "Russo One", sans-serif;
   display: inline-block;
   font-weight: 800;
   font-size: 20px;
@@ -151,6 +169,21 @@ li {
   }
 }
 
+.create-post-container {
+  display: flex;
+  width: 650px;
+}
+
+.create-post-form {
+  flex-direction: column;
+  padding: 30px;
+  background: #161616;
+  width: 80%;
+  margin: 10px auto;
+  border-radius: 4px;
+  border: 3px solid rgb(43, 43, 43);
+}
+
 .entry {
   display: flex;
   flex-direction: column;
@@ -178,6 +211,16 @@ label {
   font-weight: 600;
   padding: 4px;
   margin: 4px;
+  border-radius: 4px;
+
+  &:focus {
+    border: #29aae1 2px solid;
+  }
+
+  &-post {
+    height: 150px;
+    resize: vertical;
+  }
 }
 
 .home {
@@ -190,10 +233,10 @@ label {
 }
 
 .post {
-  border: 1px solid white;
+  border: 3px solid rgb(43, 43, 43);
   border-radius: 4px;
-  padding: 10px;
-  margin-bottom: 5px;
+  padding: 5px;
+  margin-bottom: 6px;
 }
 
 .post-user {
@@ -209,12 +252,13 @@ label {
 }
 
 .post-body {
-  padding: 5px 0px 20px 0px;
-  font-size: 24px;
+  padding: 5px 5px 20px 5px;
+  font-size: 20px;
 }
 
 .post-container {
   max-width: 80%;
+  max-width: 600px;
   min-width: 300px;
 }
 
@@ -299,8 +343,10 @@ label {
 }
 
 .count {
-  font-size: 16px;
+  font-family: "Russo One", sans-serif;
+  font-size: 14px;
   margin: 10px;
+  font-weight: 300;
 }
 
 .image-input {

@@ -16,7 +16,11 @@ class HomePage extends Component<any, any> {
     const { posts, loading } = this.props.data;
     const { authenticated } = this.props;
     let recentPostsMarkup = !loading ? (
-      posts.map((post: any) => <Post key={post.postId} post={post} />)
+      posts ? (
+        posts.map((post: any) => <Post key={post.postId} post={post} />)
+      ) : (
+        <p>Error Loading Posts</p>
+      )
     ) : (
       <p>Loading...</p>
     );
@@ -26,7 +30,7 @@ class HomePage extends Component<any, any> {
           <img className="hero-image" src={Hero} alt="Special Forces Soldier" />
         </div>
         <div className="home">
-          <h1>Posts</h1>
+          <h1>POSTS</h1>
           {authenticated ? <CreatePost /> : null}
 
           <div className="post-container">{recentPostsMarkup}</div>

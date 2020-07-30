@@ -21,10 +21,10 @@ class MyHeader extends Component<any, any> {
           <Fragment></Fragment>
         ) : (
           <Fragment>
-            <Link to="signup" className="nav-link">
+            <Link to="signup" className="button">
               SIGNUP
             </Link>
-            <Link to="login" className="nav-link">
+            <Link to="login" className="button">
               LOGIN
             </Link>
           </Fragment>
