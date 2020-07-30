@@ -51,7 +51,9 @@ class Notifications extends Component<any, any> {
                   className="nav-link"
                   to={`users/${not.recipient}/post/${not.postId}`}
                 >
-                  {icon} {not.sender} {verb} your post {time}
+                  <p>
+                    {icon} {not.sender} {verb} your post {time}
+                  </p>
                 </Link>
               </div>
             );
@@ -61,12 +63,12 @@ class Notifications extends Component<any, any> {
     return (
       <Fragment>
         <div className="notifications">
-          <button className="nav-button" onClick={this.handleOpen}>
+          <button className="button" onClick={this.handleOpen}>
             {notifications.filter((not: any) => not.read === false).length}
           </button>
           {this.state.open ? (
-            <button className="button" onClick={this.handleClose}>
-              CLOSE
+            <button className="button--red" onClick={this.handleClose}>
+              X
             </button>
           ) : null}
           <div className="notification-markup">
