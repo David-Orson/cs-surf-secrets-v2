@@ -75,7 +75,7 @@ class PostDialog extends Component<any, any> {
 
     return (
       <Fragment>
-        <button className="button" onClick={this.handleOpen}>
+        <button className="button-small" onClick={this.handleOpen}>
           OPEN
         </button>
         {this.state.open ? (

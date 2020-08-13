@@ -35,30 +35,37 @@ class Post extends Component<any, any> {
     return (
       <div className="post">
         <div className="post-user">
-          <img
-            className="post-user-image"
-            height="50px"
-            width="50px"
-            src={`${userImage}`}
-            alt={`${userHandle}`}
-          />
+          <div className="post-left">
+            <img
+              className="post-user-image"
+              height="50px"
+              width="50px"
+              src={`${userImage}`}
+              alt={`${userHandle}`}
+            />
+
+            <div className="post-right">
+              <Link className="user-link" to={`/users/${userHandle}`}>
+                {userHandle}
+              </Link>
+              <p className="caption">{dayjs(createdAt).fromNow()}</p>
+            </div>
+          </div>
+
           {deleteButton}
         </div>
 
-        <Link className="user-link" to={`/users/${userHandle}`}>
-          {userHandle}
-        </Link>
-
-        <p className="caption">{dayjs(createdAt).fromNow()}</p>
-        <p className="post-body">{body}</p>
-        <LikeButton postId={postId} />
-        <span className="count">{likeCount} Likes </span>
-        <span className="count">{commentCount} Comments</span>
-        <PostDialog
-          postId={postId}
-          userHandle={userHandle}
-          openDialog={this.props.openDialog}
-        />
+        <div className="post-main">
+          <p className="post-body">{body}</p>
+          <LikeButton postId={postId} />
+          <span className="count">{likeCount} Likes </span>
+          <span className="count">{commentCount} Comments</span>
+          <PostDialog
+            postId={postId}
+            userHandle={userHandle}
+            openDialog={this.props.openDialog}
+          />
+        </div>
       </div>
     );
   }

@@ -70,6 +70,22 @@ li {
   border: 1px solid rgb(43, 43, 43);
   background-color: #131313;
   color: white;
+
+  &-small {
+    font-family: "Russo One", sans-serif;
+    display: inline-block;
+    font-weight: 500;
+    padding: 5px;
+    color: #202020;
+    border-radius: 5px;
+    margin: 4px 4px 6px 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 12px;
+    border: 1px solid rgb(43, 43, 43);
+    background-color: #131313;
+    color: white;
+  }
 }
 
 .button--red {
@@ -85,7 +101,7 @@ li {
   text-decoration: none;
   font-size: 16px;
   border: none;
-  border: 1px solid rgb(182, 182, 182);
+  border: 1px solid rgb(87, 87, 87);
 }
 
 .nav {
@@ -229,6 +245,7 @@ label {
   &-post {
     height: 150px;
     resize: vertical;
+    margin-bottom: 10px;
   }
 }
 
@@ -246,6 +263,20 @@ label {
   border-radius: 4px;
   padding: 5px;
   margin-bottom: 6px;
+
+  &-left {
+    display: flex;
+    margin-left: 15px;
+  }
+
+  &-right {
+    margin-left: 10px;
+  }
+
+  &-main {
+    margin-left: 15%;
+    margin-right: 5%;
+  }
 }
 
 .post-user {
@@ -262,7 +293,7 @@ label {
 
 .post-body {
   padding: 5px 5px 20px 5px;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .post-container {
@@ -455,4 +486,9 @@ label {
   min-width: 70px;
   text-align: center;
   padding: 3px 0px;
+}
+
+.errors {
+  color: red;
+  margin: 3px;
 }

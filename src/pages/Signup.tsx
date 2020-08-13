@@ -46,7 +46,7 @@ class SignupPage extends Component<any, any> {
     const { errors } = this.state;
     return (
       <div className="signup">
-        <h4>Signup</h4>
+        <h4>SIGNUP</h4>
         <form noValidate className="signup-form" onSubmit={this.handleSubmit}>
           <div className="entry">
             <label>Email Address</label>
@@ -58,7 +58,7 @@ class SignupPage extends Component<any, any> {
               value={this.state.email}
               onChange={this.handleChange}
             />
-            {errors.email && <p>{errors.email}</p>}
+            {errors.email && <p className="errors">{errors.email}</p>}
           </div>
           <div className="entry">
             <label>Password</label>
@@ -70,7 +70,7 @@ class SignupPage extends Component<any, any> {
               value={this.state.password}
               onChange={this.handleChange}
             />
-            {errors.password && <p>{errors.password}</p>}
+            {errors.password && <p className="errors">{errors.password}</p>}
           </div>
           <div className="entry">
             <label>Confirm Password</label>
@@ -82,7 +82,9 @@ class SignupPage extends Component<any, any> {
               value={this.state.confirmPassword}
               onChange={this.handleChange}
             />
-            {errors.confirmPassword && <p>{errors.confirmPassword}</p>}
+            {errors.confirmPassword && (
+              <p className="errors">{errors.confirmPassword}</p>
+            )}
           </div>
           <div className="entry">
             <label>Username</label>
@@ -94,9 +96,9 @@ class SignupPage extends Component<any, any> {
               value={this.state.handle}
               onChange={this.handleChange}
             />
-            {errors.handle && <p>{errors.handle}</p>}
+            {errors.handle && <p className="errors">{errors.handle}</p>}
           </div>
-          {errors.general && <p>{errors.general}</p>}
+          {errors.general && <p className="errors">{errors.general}</p>}
           <button className="button" type="submit">
             SIGNUP
           </button>

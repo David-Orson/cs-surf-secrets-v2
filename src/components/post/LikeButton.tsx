@@ -25,11 +25,11 @@ export class LikeButton extends Component<any, any> {
     const LikeButton = !authenticated ? (
       <div></div>
     ) : this.likedPost() ? (
-      <button className="button" onClick={this.unlikePost}>
+      <button className="button-small" onClick={this.unlikePost}>
         -
       </button>
     ) : (
-      <button className="button" onClick={this.likePost}>
+      <button className="button-small" onClick={this.likePost}>
         +
       </button>
     );

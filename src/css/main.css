@@ -80,6 +80,22 @@ li {
   color: white;
 }
 
+.button-small {
+  font-family: "Russo One", sans-serif;
+  display: inline-block;
+  font-weight: 500;
+  padding: 5px;
+  color: #202020;
+  border-radius: 5px;
+  margin: 4px 4px 6px 4px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 12px;
+  border: 1px solid #2b2b2b;
+  background-color: #131313;
+  color: white;
+}
+
 .button--red {
   font-family: "Russo One", sans-serif;
   display: inline-block;
@@ -93,7 +109,7 @@ li {
   text-decoration: none;
   font-size: 16px;
   border: none;
-  border: 1px solid #b6b6b6;
+  border: 1px solid #575757;
 }
 
 .nav {
@@ -261,6 +277,7 @@ label {
 .input-post {
   height: 150px;
   resize: vertical;
+  margin-bottom: 10px;
 }
 
 .home {
@@ -288,6 +305,22 @@ label {
   margin-bottom: 6px;
 }
 
+.post-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 15px;
+}
+
+.post-right {
+  margin-left: 10px;
+}
+
+.post-main {
+  margin-left: 15%;
+  margin-right: 5%;
+}
+
 .post-user {
   margin-top: 10px;
   display: -webkit-box;
@@ -308,7 +341,7 @@ label {
 
 .post-body {
   padding: 5px 5px 20px 5px;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .post-container {
@@ -539,6 +572,11 @@ label {
   min-width: 70px;
   text-align: center;
   padding: 3px 0px;
+}
+
+.errors {
+  color: red;
+  margin: 3px;
 }
 
 .hero-container {

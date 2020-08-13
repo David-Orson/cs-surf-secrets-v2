@@ -39,7 +39,7 @@ class LoginPage extends Component<any, any> {
     const { errors } = this.state;
     return (
       <div className="signup">
-        <h4>Login</h4>
+        <h4>LOGIN</h4>
         <form noValidate className="signup-form" onSubmit={this.handleSubmit}>
           <div className="entry">
             <label className="label">Email Address</label>
@@ -51,7 +51,7 @@ class LoginPage extends Component<any, any> {
               value={this.state.email}
               onChange={this.handleChange}
             />
-            {errors.email && <p>{errors.email}</p>}
+            {errors.email && <p className="errors">{errors.email}</p>}
           </div>
           <div className="entry">
             <label>Password</label>
@@ -63,9 +63,9 @@ class LoginPage extends Component<any, any> {
               value={this.state.password}
               onChange={this.handleChange}
             />
-            {errors.password && <p>{errors.password}</p>}
+            {errors.password && <p className="errors">{errors.password}</p>}
           </div>
-          {errors.general && <p>{errors.general}</p>}
+          {errors.general && <p className="errors">{errors.general}</p>}
           <button className="button" type="submit">
             LOGIN
           </button>
