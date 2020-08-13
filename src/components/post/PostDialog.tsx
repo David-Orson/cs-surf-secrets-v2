@@ -52,6 +52,7 @@ class PostDialog extends Component<any, any> {
         comments,
       },
       UI: { loading },
+      authenticated,
     } = this.props;
 
     const falseOpen = {
@@ -71,11 +72,34 @@ class PostDialog extends Component<any, any> {
       </div>
     );
 
+    console.log(commentCount);
+
+    const renderer = () => {
+      if (commentCount > 0) {
+        return (
+          <button className="button-small" onClick={this.handleOpen}>
+            OPEN
+          </button>
+        );
+      } else {
+        return <div className="spacer"></div>;
+      }
+    };
+    const conditionalOpener = authenticated ? (
+      <button className="button-small" onClick={this.handleOpen}>
+        OPEN
+      </button>
+    ) : this.props.commentsExist ? (
+      <button className="button-small" onClick={this.handleOpen}>
+        OPEN
+      </button>
+    ) : (
+      <div className="spacer"></div>
+    );
+
     return (
       <Fragment>
-        <button className="button-small" onClick={this.handleOpen}>
-          OPEN
-        </button>
+        {conditionalOpener}
         {this.state.open ? (
           <div className="post" style={this.state.open ? trueOpen : falseOpen}>
             {dialogMarkup}
@@ -91,6 +115,7 @@ class PostDialog extends Component<any, any> {
 const mapStateToProps = (state: any) => ({
   post: state.data.post,
   UI: state.UI,
+  authenticated: state.user.authenticated,
 });
 
 export default connect(mapStateToProps, { getPost, clearErrors })(PostDialog);

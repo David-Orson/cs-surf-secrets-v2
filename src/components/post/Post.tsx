@@ -27,6 +27,8 @@ class Post extends Component<any, any> {
       },
     } = this.props;
 
+    const commentsExist = commentCount;
+
     const deleteButton =
       authenticated && userHandle === handle ? (
         <DeletePost postId={postId} />
@@ -66,6 +68,7 @@ class Post extends Component<any, any> {
             postId={postId}
             userHandle={userHandle}
             openDialog={this.props.openDialog}
+            commentsExist={commentsExist}
           />
         </div>
       </div>

@@ -603,6 +603,10 @@ label {
   margin-top: -30px;
 }
 
+.spacer {
+  height: 40px;
+}
+
 .hero-container {
   background-image: url("../Assets/images/nyxhero.png");
   width: 100vw;
