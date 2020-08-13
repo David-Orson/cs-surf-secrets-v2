@@ -1,44 +1,7 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Surf Secrets is a social media site for gamers who play a modded version of Counter-Strike: Global Offensive (and CS: Source!). I wanted this site to have functionality like a basic social media account, where people can signup, create posts and react to the posts of other users. They can also customise their profile and create a todo list for surf maps they are looking at competing on. Users are notified if another user likes or comments on their posts.
 
-## Available Scripts
+This site offered me the bulk of my challenges so far, integrating React with firebase was difficult for me at the time, even though I had experience using firebase with Javascript apps. I made the decision to transition from using the standard Firebase SDK in frontend Javascript to using Cloud functions, which meant that I had to understand and implement Node.JS and Express. This was the right decision in terms of making a more viable product for the use case and supports the apps future.
 
-In the project directory, you can run:
+I had a coding friend who mentored me and advised me that if I wanted this to be a long term project, I should transition to typescript. This presented challenges (even though I knew how to set types) with implementing this fully with React/Redux as many of the errors I handled were difficult to understand, I now understand how to set the types for props and state and use interfaces. This site was also my first implementation of Redux, learning about a functioning store with actions and reducers which use Axios pull the data from the cloud functions.
 
-### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+I have been given access to an API for the leading CS:GO / CS:S server so that I can implement player stats from the game into their profiles amongst other functionalities. For the future of this app, I intend to integrate: automatic posts of in-game achievements, ranking system based on performance amongst multiple servers, in-game challenges which are rewarded with site badges. In the distant future, I intend to make a match making system so that players can arrange competitive games and report the score with evidence of the result, but this may require creating my own surf server.
