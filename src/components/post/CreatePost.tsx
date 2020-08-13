@@ -65,15 +65,18 @@ class CreatePost extends Component<any, any> {
           className="create-post-container"
           style={this.state.open ? trueOpen : falseOpen}
         >
-          <button className="button--red" onClick={this.handleClose}>
-            CANCEL
-          </button>
           <form
             noValidate
             className="create-post-form"
             onSubmit={this.handleSubmit}
           >
-            <div>
+            <button
+              className="button-small-red right"
+              onClick={this.handleClose}
+            >
+              X
+            </button>
+            <div className="lessMargin">
               <h4>NEW POST</h4>
               <label>Post Content</label>
               <textarea

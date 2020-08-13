@@ -600,11 +600,15 @@ label {
 }
 
 .lessMargin {
-  margin-top: -30px;
+  margin-right: -5%;
 }
 
 .spacer {
   height: 40px;
+}
+
+.right {
+  float: right;
 }
 
 .hero-container {

@@ -74,21 +74,16 @@ class PostDialog extends Component<any, any> {
 
     console.log(commentCount);
 
-    const renderer = () => {
-      if (commentCount > 0) {
-        return (
-          <button className="button-small" onClick={this.handleOpen}>
-            OPEN
-          </button>
-        );
-      } else {
-        return <div className="spacer"></div>;
-      }
-    };
     const conditionalOpener = authenticated ? (
-      <button className="button-small" onClick={this.handleOpen}>
-        OPEN
-      </button>
+      this.props.commentsExist ? (
+        <button className="button-small" onClick={this.handleOpen}>
+          view
+        </button>
+      ) : (
+        <button className="button-small" onClick={this.handleOpen}>
+          . . .
+        </button>
+      )
     ) : this.props.commentsExist ? (
       <button className="button-small" onClick={this.handleOpen}>
         OPEN

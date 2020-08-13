@@ -53,10 +53,10 @@ class CommentForm extends Component<any, any> {
           className="create-post-form"
           onSubmit={this.handleSubmit}
         >
-          <button className="button-small-red " onClick={this.handleClose}>
+          <button className="button-small-red right" onClick={this.handleClose}>
             X
           </button>
-          <div className="text--center lessMargin">
+          <div className="lessMargin">
             <label>Comment on Post</label>
             <textarea
               className="input input-post"
