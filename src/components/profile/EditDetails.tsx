@@ -61,11 +61,30 @@ export class EditDetails extends Component<any, any> {
     };
     return (
       <Fragment>
-        <button className="button" onClick={this.handleOpen}>
+        <button className="button-small" onClick={this.handleOpen}>
           EDIT
         </button>
+        <div
+          style={this.state.open ? trueOpen : falseOpen}
+          className="signup-form"
+        >
+          <button className="button-small-red right" onClick={this.handleClose}>
+            X
+          </button>
+          <h4>Profile Image</h4>
+          <input
+            type="file"
+            id="imageInput"
+            onChange={this.props.handleImageChange}
+            className="image-input"
+          />
+        </div>
         <div style={this.state.open ? trueOpen : falseOpen}>
-          <form noValidate className="signup-form" onSubmit={this.handleSubmit}>
+          <form
+            noValidate
+            className="signup-form text--center"
+            onSubmit={this.handleSubmit}
+          >
             <div className="entry">
               <label>Bio</label>
               <input
@@ -100,7 +119,7 @@ export class EditDetails extends Component<any, any> {
               />
             </div>
 
-            <button className="button" type="submit">
+            <button className="button-small" type="submit">
               SAVE
             </button>
           </form>

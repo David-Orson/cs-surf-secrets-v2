@@ -611,6 +611,10 @@ label {
   float: right;
 }
 
+.caption-container {
+  margin: 0px 10px 0px 30px;
+}
+
 .hero-container {
   background-image: url("../Assets/images/nyxhero.png");
   width: 100vw;

@@ -50,6 +50,12 @@ class Profile extends Component<any, any> {
       authenticated ? (
         <div className="profile-container">
           <div className="profile">
+            <button
+              className="button-small-red right"
+              onClick={this.handleLogout}
+            >
+              LOGOUT
+            </button>
             <div className="profile-image-container">
               <img
                 className="user-image"
@@ -60,16 +66,13 @@ class Profile extends Component<any, any> {
               />
               <p className="profile-link">{handle}</p>
             </div>
-            {location && <p className="caption">{location}</p>}
-            <p className="caption">
-              Member Since {dayjs(createdAt).format("DD MMM YYYY")}
-            </p>
-            <input
-              type="file"
-              id="imageInput"
-              onChange={this.handleImageChange}
-              className="image-input"
-            />
+
+            <div className="caption-container">
+              {location && <p className="caption">{location}</p>}
+              <p className="caption">
+                Member Since {dayjs(createdAt).format("DD MMM YYYY")}
+              </p>
+            </div>
 
             <div className="user-details">
               <div className="bio-details">
@@ -77,7 +80,7 @@ class Profile extends Component<any, any> {
                 {bio && <p>{bio}</p>}
               </div>
             </div>
-
+            <EditDetails handleImageChange={this.handleImageChange} />
             <div className="profile-details">
               {steam && <button className="button">STEAM</button>}
               <div>
@@ -85,10 +88,6 @@ class Profile extends Component<any, any> {
                 <ProfileTodoList handle={handle} />
               </div>
             </div>
-            <button className="button--red" onClick={this.handleLogout}>
-              LOGOUT
-            </button>
-            <EditDetails />
           </div>
         </div>
       ) : (
