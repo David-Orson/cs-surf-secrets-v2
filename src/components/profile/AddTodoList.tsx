@@ -41,7 +41,7 @@ export class AddTodoList extends Component<any, any> {
     return (
       <div className="todo-container">
         <h2>To Do List</h2>
-        <form onSubmit={this.handleSubmit}>
+        <form className="todo-form" onSubmit={this.handleSubmit}>
           <select
             className="todo-select"
             value={this.state.record}
@@ -90,7 +90,7 @@ export class AddTodoList extends Component<any, any> {
             <option value="ksfgo">KSFGO</option>
           </select>
           {errors.body && <p>{errors.body}</p>}
-          <button className="button" type="submit">
+          <button className="button-small" type="submit">
             ADD
           </button>
         </form>

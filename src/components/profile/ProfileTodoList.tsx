@@ -36,7 +36,7 @@ export class ProfileTodoList extends Component<any, any> {
     );
     return (
       <div id="todo-list" className="todo-list-container">
-        <button className="button" onClick={this.handleOpener}>
+        <button className="button-small" onClick={this.handleOpener}>
           VIEW
         </button>
         <div
@@ -44,10 +44,10 @@ export class ProfileTodoList extends Component<any, any> {
           className="todo-items-container"
         >
           <ul>
-            <li className="todo-li-1">Record</li>
-            <li className="todo-li">Map</li>
-            <li className="todo-li-3">Zone</li>
-            <li className="todo-li-4">Server</li>
+            <li className="todo-li-1 title">Record</li>
+            <li className="todo-li title">Map</li>
+            <li className="todo-li-3 title">Zone</li>
+            <li className="todo-li-4 title">Server</li>
             {todoMarkup}
           </ul>
         </div>

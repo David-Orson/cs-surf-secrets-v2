@@ -423,22 +423,6 @@ label {
   margin: 5px;
 }
 
-.profile-details {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
 .user-details {
   margin: 10px;
 }
@@ -494,35 +478,46 @@ label {
   border-radius: 3px;
 }
 
+.todo-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
 .todo-select {
   display: block;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 700;
   padding: 1px;
   margin: 6px;
-  width: 100%;
+  width: 100px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: 1px solid #aaa;
   -webkit-box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.4);
           box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.4);
-  border-radius: 2px;
   background-color: #2b2b2b;
   border-radius: 4px;
   color: white;
+  height: 24px;
 }
 
 .todo-input {
   display: block;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 700;
-  padding: 4px;
+  padding: 1px 1px 1px 6px;
   margin: 6px;
-  width: 97.5%;
+  width: 100px;
   border-radius: 4px;
   border: 1px solid #aaa;
   background-color: #2b2b2b;
   color: white;
+  height: 20px;
 }
 
 .todo-input::-webkit-input-placeholder {
@@ -552,20 +547,23 @@ label {
   padding: 5px;
   border-radius: 3px;
   margin: 10px 0px 0px 0px;
-}
-
-.todo-li {
-  display: inline-block;
-  border: 3px solid #2b2b2b;
-  min-width: 150px;
-  text-align: center;
-  padding: 3px 0px;
+  font-size: 12px;
 }
 
 .todo-li-1 {
   display: inline-block;
   border: 3px solid #2b2b2b;
+  min-width: 70px;
+  width: 18%;
+  text-align: center;
+  padding: 3px 0px;
+}
+
+.todo-li {
+  display: inline-block;
+  border: 3px solid #2b2b2b;
   min-width: 100px;
+  width: 18%;
   text-align: center;
   padding: 3px 0px;
 }
@@ -573,15 +571,8 @@ label {
 .todo-li-3 {
   display: inline-block;
   border: 3px solid #2b2b2b;
-  min-width: 70px;
-  text-align: center;
-  padding: 3px 0px;
-}
-
-.todo-li-3 {
-  display: inline-block;
-  border: 3px solid #2b2b2b;
-  min-width: 70px;
+  min-width: 50px;
+  width: 18%;
   text-align: center;
   padding: 3px 0px;
 }
@@ -589,9 +580,14 @@ label {
 .todo-li-4 {
   display: inline-block;
   border: 3px solid #2b2b2b;
-  min-width: 70px;
+  min-width: 50px;
+  width: 18%;
   text-align: center;
   padding: 3px 0px;
+}
+
+.title {
+  font-weight: 600;
 }
 
 .errors {
