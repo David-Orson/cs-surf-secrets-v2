@@ -10,6 +10,7 @@ interface State {
   zone: any;
   server: any;
   errors: any;
+  open: boolean;
 }
 export class AddTodoList extends Component<any, any> {
   state: State = {
@@ -18,6 +19,7 @@ export class AddTodoList extends Component<any, any> {
     zone: "map",
     server: "css ksf",
     errors: {},
+    open: false,
   };
 
   handleChange = (e: any) => {
@@ -35,65 +37,82 @@ export class AddTodoList extends Component<any, any> {
     console.log(this.state);
   };
 
+  handleOpen = () => {
+    this.setState({ open: true });
+  };
+
+  handleClose = () => {
+    this.setState({ open: false });
+  };
+
   render() {
     const { errors } = this.state;
 
     return (
       <div className="todo-container">
         <h2>To Do List</h2>
-        <form className="todo-form" onSubmit={this.handleSubmit}>
-          <select
-            className="todo-select"
-            value={this.state.record}
-            name="record"
-            onChange={this.handleChange}
-          >
-            <option value="wr">WR</option>
-            <option value="top10">top10</option>
-            <option value="g1">G1</option>
-            <option value="g2">G2</option>
-            <option value="g3">G3</option>
-            <option value="g4">G4</option>
-            <option value="g5">G5</option>
-            <option value="g6">G6</option>
-            <option value="pr">PR</option>
-            <option value="one-shot">One-Shot</option>
-            <option value="completion">Completion</option>
-          </select>
-          <input
-            type="text"
-            name="course"
-            id="course"
-            value={this.state.course}
-            onChange={this.handleChange}
-            placeholder="Map"
-            className="todo-input"
-          />
-          <select
-            value={this.state.zone}
-            name="zone"
-            onChange={this.handleChange}
-            className="todo-select"
-          >
-            <option value="map">Map</option>
-            <option value="stage">Stage</option>
-            <option value="bonus">Bonus</option>
-          </select>
-          <select
-            value={this.state.server}
-            name="server"
-            onChange={this.handleChange}
-            className="todo-select"
-          >
-            <option value="css-ksf">CSS KSF</option>
-            <option value="heaven">Heaven</option>
-            <option value="ksfgo">KSFGO</option>
-          </select>
-          {errors.body && <p>{errors.body}</p>}
-          <button className="button-small" type="submit">
+        {this.state.open ? (
+          <form className="todo-form" onSubmit={this.handleSubmit}>
+            <select
+              className="todo-select"
+              value={this.state.record}
+              name="record"
+              onChange={this.handleChange}
+            >
+              <option value="wr">WR</option>
+              <option value="top10">top10</option>
+              <option value="g1">G1</option>
+              <option value="g2">G2</option>
+              <option value="g3">G3</option>
+              <option value="g4">G4</option>
+              <option value="g5">G5</option>
+              <option value="g6">G6</option>
+              <option value="pr">PR</option>
+              <option value="one-shot">One-Shot</option>
+              <option value="completion">Completion</option>
+            </select>
+            <input
+              type="text"
+              name="course"
+              id="course"
+              value={this.state.course}
+              onChange={this.handleChange}
+              placeholder="Map"
+              className="todo-input"
+            />
+            <select
+              value={this.state.zone}
+              name="zone"
+              onChange={this.handleChange}
+              className="todo-select"
+            >
+              <option value="map">Map</option>
+              <option value="stage">Stage</option>
+              <option value="bonus">Bonus</option>
+            </select>
+            <select
+              value={this.state.server}
+              name="server"
+              onChange={this.handleChange}
+              className="todo-select"
+            >
+              <option value="css-ksf">CSS KSF</option>
+              <option value="heaven">Heaven</option>
+              <option value="ksfgo">KSFGO</option>
+            </select>
+            {errors.body && <p>{errors.body}</p>}
+            <button className="button-small" type="submit">
+              ADD
+            </button>
+            <button className="button-small-red" onClick={this.handleClose}>
+              X
+            </button>
+          </form>
+        ) : (
+          <button className="button-small" onClick={this.handleOpen}>
             ADD
           </button>
-        </form>
+        )}
       </div>
     );
   }
