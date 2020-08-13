@@ -14,10 +14,12 @@ class User extends Component<any, any> {
 
   componentDidMount() {
     const url = window.location.href;
-    const handleAndPost = url.slice(32);
+    const handleAndPost = url.slice(28);
     const urlArr = handleAndPost.split("/");
     const handle = urlArr[0];
     const postId = urlArr[2];
+
+    console.log(handle);
 
     if (postId) this.setState({ postIdParam: postId });
 

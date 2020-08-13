@@ -20,10 +20,13 @@ const StaticProfile = (props: any) => {
           />
           <p className="profile-link">{handle}</p>
         </div>
-        {location && <p className="caption">{location}</p>}
-        <p className="caption">
-          Member Since {dayjs(createdAt).format("DD MMM YYYY")}
-        </p>
+        <div className="caption-container">
+          {location && <p className="caption">{location}</p>}
+          <p className="caption">
+            Member Since {dayjs(createdAt).format("DD MMM YYYY")}
+          </p>
+        </div>
+
         <div className="user-details">
           <div className="bio-details">
             <h3>Bio</h3>
