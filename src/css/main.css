@@ -18,7 +18,7 @@ body {
 /* fonts/decorations */
 /*
 
-            font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 
     font-family: 'Russo One', sans-serif; */
 h1 {
@@ -356,7 +356,7 @@ label {
 }
 
 .post-body {
-  padding: 5px 5px 20px 5px;
+  padding: 5px 5px 10px 5px;
   font-size: 16px;
 }
 
@@ -380,7 +380,7 @@ label {
 }
 
 .caption {
-  font-family: "Russo One", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 10px;
   padding-bottom: 10px;
 }

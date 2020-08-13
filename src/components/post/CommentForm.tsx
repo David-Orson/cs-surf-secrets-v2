@@ -53,7 +53,7 @@ class CommentForm extends Component<any, any> {
           className="create-post-form"
           onSubmit={this.handleSubmit}
         >
-          <button className="button--red " onClick={this.handleClose}>
+          <button className="button-small-red " onClick={this.handleClose}>
             X
           </button>
           <div className="text--center lessMargin">
@@ -65,10 +65,10 @@ class CommentForm extends Component<any, any> {
               value={this.state.body}
               onChange={this.handleChange}
             />
-            {errors.comment && <p>{errors.comment}</p>}
+            {errors.comment && <p className="errors">{errors.comment}</p>}
           </div>
           <div className="center">
-            <button className="button" type="submit">
+            <button className="button-small" type="submit">
               COMMENT
             </button>
           </div>
