@@ -35,10 +35,8 @@ class PostDialog extends Component<any, any> {
     this.props.getPost(this.props.postId);
   };
 
-  handleClose = () => {
-    window.history.pushState(null, "Surf Secrets", this.state.oldPath);
+  closer = () => {
     this.setState({ open: false });
-    this.props.clearErrors();
   };
 
   render() {
@@ -68,7 +66,7 @@ class PostDialog extends Component<any, any> {
       <p>Loading...</p>
     ) : (
       <div>
-        <CommentForm postId={postId} />
+        <CommentForm postId={postId} closer={this.closer} />
         <Comments comments={comments} />
       </div>
     );
@@ -80,9 +78,6 @@ class PostDialog extends Component<any, any> {
         </button>
         {this.state.open ? (
           <div className="post" style={this.state.open ? trueOpen : falseOpen}>
-            <button className="button--red" onClick={this.handleClose}>
-              X
-            </button>
             {dialogMarkup}
           </div>
         ) : (

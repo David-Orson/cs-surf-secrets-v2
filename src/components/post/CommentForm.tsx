@@ -1,17 +1,21 @@
 import React, { Component } from "react";
 
 import { connect } from "react-redux";
-import { submitComment } from "../../redux/actions/dataActions";
+import { submitComment, clearErrors } from "../../redux/actions/dataActions";
 
 interface State {
   body: any;
   errors: any;
+  oldPath: any;
+  newPath: any;
 }
 
 class CommentForm extends Component<any, any> {
   state: State = {
     body: "",
     errors: {},
+    oldPath: "",
+    newPath: "",
   };
 
   componentWillReceiveProps(nextProps: any) {
@@ -32,6 +36,13 @@ class CommentForm extends Component<any, any> {
     this.props.submitComment(this.props.postId, { body: this.state.body });
   };
 
+  handleClose = () => {
+    window.history.pushState(null, "Surf Secrets", this.state.oldPath);
+    this.props.closer();
+    // Prop Drilled ^ 1 layer
+    this.props.clearErrors();
+  };
+
   render() {
     const { authenticated } = this.props;
     const errors = this.state.errors;
@@ -42,7 +53,10 @@ class CommentForm extends Component<any, any> {
           className="create-post-form"
           onSubmit={this.handleSubmit}
         >
-          <div className="text--center">
+          <button className="button--red " onClick={this.handleClose}>
+            X
+          </button>
+          <div className="text--center lessMargin">
             <label>Comment on Post</label>
             <textarea
               className="input input-post"
@@ -72,4 +86,6 @@ const mapStateToProps = (state: any) => ({
   errors: state.errors,
 });
 
-export default connect(mapStateToProps, { submitComment })(CommentForm);
+export default connect(mapStateToProps, { submitComment, clearErrors })(
+  CommentForm
+);

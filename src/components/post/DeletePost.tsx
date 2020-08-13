@@ -11,7 +11,7 @@ class DeletePost extends Component<any, any> {
   render() {
     return (
       <Fragment>
-        <button className="button--red" onClick={this.deletePost}>
+        <button className="button-small-red" onClick={this.deletePost}>
           DELETE
         </button>
       </Fragment>

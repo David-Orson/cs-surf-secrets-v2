@@ -96,6 +96,22 @@ li {
   color: white;
 }
 
+.button-small-red {
+  font-family: "Russo One", sans-serif;
+  display: inline-block;
+  font-weight: 600;
+  padding: 1px 5px;
+  color: #161616;
+  background-color: #8d0000;
+  border-radius: 3px;
+  margin: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 12px;
+  border: none;
+  border: 1px solid #575757;
+}
+
 .button--red {
   font-family: "Russo One", sans-serif;
   display: inline-block;
@@ -219,9 +235,9 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 30px;
+  padding: 10px;
   background: #161616;
-  width: 80%;
+  width: 92%;
   margin: 10px auto;
   border-radius: 4px;
   border: 3px solid #2b2b2b;
@@ -275,7 +291,7 @@ label {
 }
 
 .input-post {
-  height: 150px;
+  height: 50px;
   resize: vertical;
   margin-bottom: 10px;
 }
@@ -317,7 +333,7 @@ label {
 }
 
 .post-main {
-  margin-left: 15%;
+  margin-left: 13%;
   margin-right: 5%;
 }
 
@@ -348,6 +364,10 @@ label {
   max-width: 80%;
   max-width: 600px;
   min-width: 300px;
+}
+
+.dialog-container {
+  margin-top: -36px;
 }
 
 .hr {
@@ -457,10 +477,10 @@ label {
 }
 
 .count {
-  font-family: "Russo One", sans-serif;
-  font-size: 14px;
-  margin: 10px;
-  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  margin: 3px;
+  font-weight: 400;
 }
 
 .image-input {
@@ -577,6 +597,10 @@ label {
 .errors {
   color: red;
   margin: 3px;
+}
+
+.lessMargin {
+  margin-top: -30px;
 }
 
 .hero-container {

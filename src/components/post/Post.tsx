@@ -60,6 +60,8 @@ class Post extends Component<any, any> {
           <LikeButton postId={postId} />
           <span className="count">{likeCount} Likes </span>
           <span className="count">{commentCount} Comments</span>
+        </div>
+        <div className="dialog-container">
           <PostDialog
             postId={postId}
             userHandle={userHandle}
