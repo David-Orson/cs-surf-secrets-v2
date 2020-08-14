@@ -29,23 +29,6 @@ class Profile extends Component<any, any> {
       },
     } = this.props;
 
-    const todoData = [
-      {
-        record: "WR",
-        map: "surf_nyx",
-        zone: "Map",
-        server: "KSF",
-        todoId: 1,
-      },
-      {
-        record: "Top10",
-        map: "surf_mesa_fix",
-        zone: "Map",
-        server: "SH",
-        todoId: 2,
-      },
-    ];
-
     let profileMarkup = !loading ? (
       authenticated ? (
         <div className="profile-container">
@@ -84,7 +67,7 @@ class Profile extends Component<any, any> {
             <div className="profile-details">
               {steam && <button className="button">STEAM</button>}
               <div>
-                <AddTodoList />
+                <AddTodoList handle={handle} />
                 <ProfileTodoList handle={handle} />
               </div>
             </div>

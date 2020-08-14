@@ -140,8 +140,8 @@ export const clearErrors = () => (dispatch: any) => {
   dispatch({ type: CLEAR_ERRORS });
 };
 
-export const addTodo = (newTodo: any) => (dispatch: any) => {
-  dispatch({ type: LOADING_UI });
+export const addTodo = (newTodo: any, userHandle: any) => (dispatch: any) => {
+  /* dispatch({ type: TODO_UI }); */
   axios
     .post("/todo", newTodo)
     .then((res) => {
@@ -149,7 +149,18 @@ export const addTodo = (newTodo: any) => (dispatch: any) => {
         type: ADD_TODO,
         payload: res.data,
       });
+
       dispatch(clearErrors());
+    })
+    .then(() => {
+      axios
+        .get(`/todos/${userHandle}`)
+        .then((res) => {
+          dispatch({ type: SET_TODOS, payload: res.data.todos });
+        })
+        .catch((err: any) => {
+          console.log(err);
+        });
     })
     .catch((err) => {
       dispatch({
@@ -160,7 +171,7 @@ export const addTodo = (newTodo: any) => (dispatch: any) => {
 };
 
 export const getTodos = (userHandle: any) => (dispatch: any) => {
-  dispatch({ type: LOADING_DATA });
+  /* dispatch({ type: LOADING_DATA }); */
   axios
     .get(`/todos/${userHandle}`)
     .then((res) => {

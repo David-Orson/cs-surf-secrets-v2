@@ -29,10 +29,11 @@ export class ProfileTodoList extends Component<any, any> {
     };
 
     let todos = this.props.data.todos;
+    console.log(todos);
     let todoMarkup = todos ? (
       todos.map((todo: any) => <Todo key={todo.todoId} todo={todo} />)
     ) : (
-      <p>Loading</p>
+      <p className="caption">Loading...</p>
     );
     return (
       <div id="todo-list" className="todo-list-container">
