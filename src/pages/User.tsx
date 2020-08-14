@@ -13,10 +13,9 @@ class User extends Component<any, any> {
   };
 
   componentDidMount() {
-    const url = window.location.href;
-    const handleAndPost = url.slice(32);
+    const handleAndPost = this.props.location.pathname;
     const urlArr = handleAndPost.split("/");
-    const handle = urlArr[0];
+    const handle = urlArr[2];
     const postId = urlArr[2];
 
     console.log(handle);

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Router, RouteComponentProps } from "@reach/router";
+import { Router, RouteComponentProps, Location } from "@reach/router";
 import jwtDecode from "jwt-decode";
 import axios from "axios";
 
@@ -22,7 +22,9 @@ const Home = (props: RouteComponentProps) => <HomePage />;
 const Profile = (props: RouteComponentProps) => <ProfilePage />;
 const Signup = (props: RouteComponentProps) => <SignupPage />;
 const Login = (props: RouteComponentProps) => <LoginPage />;
-const User = (props: RouteComponentProps) => <UserPage />;
+const User = (props: RouteComponentProps) => (
+  <UserPage location={props.location} test="test" />
+);
 
 axios.defaults.baseURL =
   "https://europe-west1-cs-surf-secrets.cloudfunctions.net/api";
@@ -40,6 +42,8 @@ if (token) {
   }
 }
 
+const test = "test";
+
 class App extends Component<any, any> {
   render() {
     return (
@@ -47,14 +51,20 @@ class App extends Component<any, any> {
         <div>
           <MyHeader />
           <MyNav />
-          <Router>
-            <Home path="/" />
-            <Profile path="profile" />
-            <Signup path="signup" />
-            <Login path="login" />
-            <User path="users/:handle" />
-            <User path="users/:handle/post/:postId" />
-          </Router>
+
+          <Location>
+            {({ location }) => (
+              <Router>
+                <Home path="/" />
+                <Profile path="profile" />
+                <Signup path="signup" />
+                <Login path="login" />
+                <User path="users/:handle" />
+                <User path="users/:handle/post/:postId" />
+              </Router>
+            )}
+          </Location>
+
           <Footer />
         </div>
       </Provider>
