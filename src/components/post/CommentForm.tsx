@@ -53,9 +53,15 @@ class CommentForm extends Component<any, any> {
           className="create-post-form"
           onSubmit={this.handleSubmit}
         >
-          <button className="button-small-red right" onClick={this.handleClose}>
-            X
-          </button>
+          {authenticated ? (
+            <button
+              className="button-small-red right"
+              onClick={this.handleClose}
+            >
+              X
+            </button>
+          ) : null}
+
           <div className="lessMargin">
             <label>Comment on Post</label>
             <textarea
